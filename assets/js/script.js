@@ -31,7 +31,17 @@ jq(function ($) {
 		$(this).toggleClass("active");
 		$("body").toggleClass("offcanvas-active");
 	});
-	particlesJS.load("particles", "/assets/particles.json", function () {
-		console.log("particles.js loaded - callback");
-	});
+
+	const particlesMeta = document.querySelector('link[name="particles"]');
+	const particlesPath = particlesMeta
+		? particlesMeta.getAttribute("content")
+		: "";
+
+	if (particlesPath) {
+		particlesJS.load("particles", particlesPath, function () {
+			console.log("particles.js loaded from", particlesPath);
+		});
+	} else {
+		console.error("Particles config meta tag not found.");
+	}
 });
