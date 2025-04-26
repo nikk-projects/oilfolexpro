@@ -1,0 +1,18 @@
+@use "./../common/variables" as var;
+
+.btn {
+	display: block;
+	width: fit-content;
+	padding: 10px 16px;
+	background: var.$purple;
+	color: var.$white;
+	font-family: var.$global-heading;
+	border-radius: 3px;
+	font-size: 16px;
+	line-height: 1.2;
+	text-transform: capitalize;
+	font-weight: 600;
+	&:hover {
+		background: var.$orange;
+	}
+}

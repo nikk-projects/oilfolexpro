@@ -1,0 +1,141 @@
+@use "./../common/variables" as var;
+header {
+	position: relative;
+	z-index: 9999;
+	padding-block: 14px;
+	.header-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.site-logo {
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			.site-title {
+				font-family: var.$global-heading;
+				font-size: 30px;
+				font-weight: 700;
+				line-height: 1.2;
+				color: var.$orange;
+				@media #{var.$small} {
+					display: none;
+				}
+			}
+		}
+		.menu-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 20px;
+			.menu-toggle {
+				display: none;
+				position: relative;
+				height: 24px;
+				width: 30px;
+				min-width: 30px;
+				min-height: 24px;
+				border: none;
+				background: transparent;
+				padding: 0;
+				margin: 0;
+				z-index: 999999;
+				cursor: pointer;
+				@media #{var.$commonmax} {
+					display: block;
+				}
+				.icon {
+					display: block;
+					height: 2px;
+					width: 30px;
+					min-width: 30px;
+					min-height: 2px;
+					background: var.$purple;
+					transition: all 0.3s ease-in-out;
+					&:before,
+					&:after {
+						position: absolute;
+						content: "";
+						left: 0;
+						height: 2px;
+						width: 30px;
+						min-width: 30px;
+						min-height: 2px;
+						background: var.$purple;
+						transition: all 0.3s ease-in-out;
+					}
+					&::before {
+						top: 0;
+					}
+					&:after {
+						bottom: 0;
+					}
+				}
+				&.active .icon {
+					width: 0;
+					min-width: 0;
+					&::before {
+						transform: rotate(45deg) translate(15px, 0px);
+						left: -13px;
+					}
+					&::after {
+						transform: rotate(-45deg) translate(-4px, 0px);
+						bottom: 14px;
+					}
+				}
+			}
+			.nav-wrapper {
+				@media #{var.$commonmax} {
+					position: fixed;
+					left: -600px;
+					top: 0;
+					height: 100vh;
+					padding: 20px;
+					max-width: 300px;
+					width: 100%;
+					z-index: 99999;
+					background: var.$white;
+					transition: all 0.3s ease-in-out;
+				}
+				.nav-menu {
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					gap: 30px;
+					padding: 0;
+					margin: 0;
+					@media #{var.$commonmax} {
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: flex-start;
+						gap: 18px;
+					}
+					.menu-item {
+						a {
+							font-family: var.$global-heading;
+							font-size: 22px;
+							font-weight: 600;
+							line-height: 1.2;
+							color: var.$black;
+							&:hover {
+								color: var.$purple;
+							}
+						}
+						&:last-child a {
+							background: var.$purple;
+							color: var.$white;
+							padding: 6px 14px;
+							border-radius: 4px;
+							&:hover {
+								background: var.$orange;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+body.offcanvas-active header .header-wrap .menu-wrapper .nav-wrapper {
+	left: 0;
+}

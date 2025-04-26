@@ -1,0 +1,63 @@
+$global-font: "Inter", Sans-serif;
+$global-heading: "Rajdhani", Sans-serif;
+
+// Color
+
+$white: #ffffff;
+$black: #000000;
+$orange: #f28c18;
+$darkblue: #1f365c;
+$purple: #5a5dd9;
+$red: #ff0000;
+
+// Fonts
+
+$p1: 20px;
+$p2: 15px;
+$p3: 12px;
+
+$b1: 16px;
+$b2: 24px;
+
+$h1-font-size: 55px;
+$h2-font-size: 40px;
+$h3-font-size: 22px;
+$h4-font-size: 16px;
+$h5-font-size: 30px;
+$h6-font-size: 16px;
+
+// screens
+$verysmall: "(max-width:450px)";
+$small: "(max-width: 575px)";
+$smallMin: "(min-width: 640px)";
+$smallmd: "(max-width: 639px)";
+$md: "(max-width: 767px)";
+$mdMin: "(min-width: 768px)";
+$commonmax: "(max-width: 991px)";
+$commonmin: "(min-width: 991px)";
+$common: "(min-width: 768px) and (max-width: 1023px)";
+$tablet: "(max-width: 1024px)";
+$large: "(max-width: 1199px)";
+$largeMin: "(min-width: 1024px)";
+$xl: "(max-width: 1299px)";
+$xlMin: "(min-width: 1200px)";
+$laptopmin: "(max-width:1366px)";
+$laptop: "(max-width:1499px)";
+$laptop2: "(max-width:1440px)";
+$largetablet: "(min-width: 1024px) and (max-width: 1199.9px)";
+$desktop: "(min-width: 1200px) and (max-width: 1365.9px)";
+$largedesktop: "(min-width: 1366px) and (max-width: 1499.9px)";
+$largedesktopextra: "(max-width:1560px)";
+$extra: "(max-width: 1599px)";
+$mainscreenmin: "(min-width: 1500px) and (max-width: 1799.9px)";
+$largescreenmin: "(min-width: 1800px)";
+$mainscreenmax: "(max-width:1600px)";
+
+$gredient: linear-gradient(155deg, #3ebefd00 0%, #84c4e81c 75%, #d4e1ea 100%);
+$boxshadow: 5px 8px 16.4px -5px rgba(0, 0, 0, 0.5);
+$radial-gradient: radial-gradient(
+	50% 50% at 50% 50%,
+	#ffffff 0%,
+	rgba(217, 217, 217, 0) 100%
+);
+$boxshadow2: 0 0 10px 0 rgba(0, 0, 0, 0.2);
