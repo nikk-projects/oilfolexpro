@@ -34,7 +34,7 @@ jq(function ($) {
 
 	const particlesMeta = document.querySelector('link[name="particles"]');
 	const particlesPath = particlesMeta
-		? particlesMeta.getAttribute("content")
+		? particlesMeta.getAttribute("href")
 		: "";
 
 	if (particlesPath) {
