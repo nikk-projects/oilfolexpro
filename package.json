@@ -1,7 +1,7 @@
 {
   "name": "oilfolexpro",
   "private": true,
-  "homepage": "https://nikk-projects.github.io/oilfolexpro",
+  "homepage": "https://nikk-projects.github.io/oilfolexpro/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

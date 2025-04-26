@@ -2,7 +2,8 @@ import { defineConfig } from "vite";
 import path from "path";
 
 export default defineConfig({
-	root: "/oilfolexpro/build/",
+	root: ".",
+  base: "/oilfolexpro/",
 	build: {
 		outDir: "build",
 		sourcemap: true,
