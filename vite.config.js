@@ -3,7 +3,7 @@ import path from "path";
 
 export default defineConfig({
 	root: ".",
-  base: "/oilfolexpro/",
+  base: "/oilfolexpro/build/",
 	build: {
 		outDir: "build",
 		sourcemap: true,
